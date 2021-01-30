@@ -1,0 +1,17 @@
+$bp
+    mobile: 480px
+    tablet: 480px
+    desktop: 1440px
+
+query($screen)
+    for $key, $value in $bp  
+        if ($screen == $key):
+            @media (max-width: $value) {block}
+                                        
+@include query(mobile)
+
+* {
+    margin: 0px
+    padding: 0px
+    box-sizing: bor
+}

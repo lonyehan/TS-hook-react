@@ -3,10 +3,6 @@ import ReactDOM from "react-dom";
 
 // css
 import "./index.css";
-import "./css/App.css";
-import "./css/Header.styl";
-import "./css/Nav.css";
-import "./css/Footer.css";
 
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";

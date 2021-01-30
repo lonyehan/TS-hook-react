@@ -1,0 +1,35 @@
+$bp: ( mobile: 480px, tablet: 768px, desktop: 1440px, );
+@mixin query($screen) {
+    @each $key,
+    $value in $bp {
+        @if ($screen==$key) {
+            @media (max-width: $value) {
+                @content;
+            }
+        }
+    }
+}
+
+// Default CSS
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    body {
+        font-family: sans-serif;
+        font-size: 30px;
+    }
+}
+
+[class^="box-"] {
+    display: grid;
+    place-items: center;
+    border: 3px solid red;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px;
+}

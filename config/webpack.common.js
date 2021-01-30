@@ -27,6 +27,19 @@ module.exports = {
                 ],
             },
             {
+                test: /\.(scss|sass)/,
+                use: [{
+                        loader: "style-loader",
+                    },
+                    {
+                        loader: "css-loader",
+                    },
+                    {
+                        loader: "sass-loader",
+                    },
+                ],
+            },
+            {
                 test: /\.styl$/,
                 use: [
                     "style-loader",
@@ -35,6 +48,12 @@ module.exports = {
                         loader: "stylus-loader",
                     },
                 ],
+            },
+            {
+                test: /\.(jpg|png)$/,
+                use: {
+                    loader: 'url-loader',
+                },
             },
         ],
     },
